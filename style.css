@@ -61,6 +61,14 @@ header img, .img{
     border-radius: 8px;
 }
 
+.btn .prg:hover{
+   background-color: #f800f8;
+}
+
+.btn .reg:hover{
+   background-color: #f800f8;
+}
+
 .btn .reg {
     margin: 5px;
     padding: 18px;
