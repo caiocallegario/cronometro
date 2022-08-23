@@ -41,7 +41,7 @@ header img, .img{
 .btns{
     display: flex;
     justify-content: center;
-    margin-top: 3%;
+    margin-top: 2%;
     flex-direction: column;
 }
 
@@ -119,7 +119,7 @@ input::placeholder {
     justify-content: center;
     text-align: center;
     background: #2a8622;
-    border-radius: 8px;
+    border-radius: 22px;
     margin-top: 50px;
     margin-left: 80px;
 }
@@ -130,7 +130,7 @@ input::placeholder {
     justify-content: center;
     text-align: center;
     background: #d61616;
-    border-radius: 8px;
+    border-radius: 22px;
     margin-top: 50px;
     margin-left: 10px;
 }
