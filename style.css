@@ -34,7 +34,7 @@ header img, .img{
     height: 150px;
     justify-content: center;
     display: flex;
-    margin-top: 4%;
+    margin-top: 3%;
 }
 
 /* Botões */
@@ -115,7 +115,7 @@ input::placeholder {
 
 .stop-start .start {
     margin: 5px;
-    padding: 18px;
+    padding: 22px;
     justify-content: center;
     text-align: center;
     background: #2a8622;
@@ -126,7 +126,7 @@ input::placeholder {
 
 .stop-start .stop {
     margin: 5px;
-    padding: 18px;
+    padding: 22px;
     justify-content: center;
     text-align: center;
     background: #d61616;
