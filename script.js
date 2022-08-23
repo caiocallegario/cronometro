@@ -39,7 +39,6 @@ function telainicio(){
     document.getElementById('prog').style.display = 'none';
     document.getElementById('iniciada').style.display = 'none';
     document.getElementById('regressive').style.display = 'none';
-    document.getElementById('input').value = 'Insira';
     document.getElementById('prog').innerHTML = '';
     document.getElementById('esgotado').style.display = 'none';
     clearInterval(tempo);
