@@ -7,6 +7,7 @@ function progressivo_tela(){
 function progressivo(){
     document.getElementById('prog').style.display = 'flex';
     document.getElementById('iniciada').style.display = 'flex';
+    document.getElementById('prog').innerHTML = '0';
 
     if(document.getElementById('prog').innerHTML != '0'){
     document.getElementById('iniciada').innerHTML = 'Contagem retornada';
