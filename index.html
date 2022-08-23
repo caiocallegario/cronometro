@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cronometro</title>
+</head>
+<body>
+<!-- Barra do navegador -->
+<nav class="navbar">
+    <!-- Logo -->
+    <div class="logo">
+        <h1>Cronometro Digital</h1>
+    </div>
+</nav>
+<!-- Header -->
+<header>
+        <div class="img">
+            <img src="IMG/cronometro.png">
+        </div>   
+
+        <div class="btns" id="valores">
+            <div class="valor" id="contagem">
+                <p id="prog" style="display: none;">0</p>
+                <p id="iniciada" style="font-size: 20px;"></p>
+            </div>
+            <!-- Inicial -->
+            <div id="btn-left-right" class="btn" style="display: flex;">
+            <!-- Separação dos botoes -->
+                <div id="btn-left" class="prog">
+                    <a onclick="progressivo_tela()" href="#">
+                        Progressivo
+                    </a>
+                </div>
+
+                <div id="btn-right" class="reg">
+                    <a onclick="regresivo_tela()" href="#">
+                        Regressivo
+                    </a>
+                </div>
+            </div>
+            <!-- Tela Regressivo -->
+            <div id="regressive" style="display: none; justify-content: center; flex-direction: column; text-align: center;">
+                <br>
+                <input id="input" style="padding: 10px; justify-content: center; margin-left: 45%; margin-right: 45%; border-radius: 10px; 
+                font-size: 20px; background-color: #8d048d; border: 1px solid black; text-align: center;" autofocus placeholder="insira"> 
+                <p id="esgotado" style="font-size: 20px;"></p>
+                <div id="stop-start-reg" class="stop-start" style="display: flex;">
+                    <!-- Separação dos botoes -->
+                    <div id="btn-left" class="start">
+                        <a onclick="regresive()" href="#">
+                            Start
+                        </a>
+                    </div>
+                        
+                    <div id="btn-right" class="stop">
+                        <a onclick="stopregressive()" ondblclick="resetregressive()" href="#">
+                            Stop
+                        </a>
+                    </div>
+                    <div class="voltar">
+                        <a href="#"><img onclick="telainicio()" src="IMG/voltar.png"></a>
+                    </div>
+                </div> 
+            </div>
+            <!-- Tela Progressivo -->
+            <div id="stop-start-prog" class="stop-start" style="display: none;">
+                <div id="btn-left" class="start">
+                    <a onclick="progressivo()" href="#">
+                        Start
+                    </a>
+                </div>
+                <!-- Separação dos botoes -->
+                <div id="btn-right" class="stop">
+                    <a onclick="stop()" ondblclick="reset()" href="#">
+                        Stop
+                    </a>
+                </div>
+                <div class="voltar">
+                    <a href="#"><img onclick="telainicio()" src="IMG/voltar.png"></a>
+                </div>
+            </div> 
+        </div>    
+</header>
+<!-- Rodapé -->
+<footer>
+        <h1>
+            Cronometro 
+            <br>
+            Digital
+        </h1>
+        <p style="color: rgb(167, 167, 167);">©Caio Callegario</p> 
+</footer>
+<script src="Cronometro/script.js"></script>
+</body>
+</html>
