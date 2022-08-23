@@ -48,7 +48,6 @@ function telainicio(){
 function regresivo_tela(){
     document.getElementById('regressive').style.display = 'flex';
     document.getElementById('btn-left-right').style.display = 'none';
-    document.getElementById('input').ariaPlaceholder = 'Insira';
 }
 
 function regresive(){
@@ -62,6 +61,7 @@ function regresive(){
             document.getElementById('input').value = '0';
             clearInterval(tempo_2);
             document.getElementById('esgotado').innerHTML = 'Tempo esgotado!';
+            document.getElementById('esgotado').style.display = 'flex';
             }
     },1000);
 }
