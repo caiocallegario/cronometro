@@ -101,6 +101,11 @@ input::placeholder {
 
 }
 
+input{
+    margin-left: 45%; 
+    margin-right: 45%;
+}
+
 /* Botões Stop Start */
 .stop-start{
     justify-content: center;
