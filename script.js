@@ -2,12 +2,12 @@ function progressivo_tela(){
     
     document.getElementById('btn-left-right').style.display = 'none';
     document.getElementById('stop-start-prog').style.display = 'flex';
+    document.getElementById('prog').innerHTML = '0';
 }
 
 function progressivo(){
     document.getElementById('prog').style.display = 'flex';
     document.getElementById('iniciada').style.display = 'flex';
-    document.getElementById('prog').innerHTML = '0';
 
     if(document.getElementById('prog').innerHTML != '0'){
     document.getElementById('iniciada').innerHTML = 'Contagem retornada';
@@ -20,6 +20,7 @@ function progressivo(){
         let cronometro = document.getElementById('prog').innerHTML;
         let soma = parseInt(cronometro) + 1;
         document.getElementById('prog').innerHTML = soma;
+
     }, 1000);
 }
 
@@ -30,20 +31,8 @@ function stop(){
 
 function reset(){
     clearInterval(tempo);
-    ronometro = document.getElementById('prog').innerHTML = '0';
+    cronometro = document.getElementById('prog').innerHTML = '0';
     document.getElementById('iniciada').innerHTML = 'Contagem zerada!';
-}
-
-function telainicio(){
-    document.getElementById('btn-left-right').style.display = 'flex';
-    document.getElementById('stop-start-prog').style.display = 'none';
-    document.getElementById('prog').style.display = 'none';
-    document.getElementById('iniciada').style.display = 'none';
-    document.getElementById('regressive').style.display = 'none';
-    document.getElementById('prog').innerHTML = '';
-    document.getElementById('esgotado').style.display = 'none';
-    clearInterval(tempo);
-    clearInterval(tempo_2);
 }
 
 function regresivo_tela(){
@@ -52,26 +41,47 @@ function regresivo_tela(){
 }
 
 function regresive(){
-    tempo_2 = setInterval(function(){
+    tempo2 = setInterval(function(){
         let cronometro = document.getElementById('input').value;
-        let subtracao = parseInt(cronometro) - 1;
+        let subtracao = Math.trunc(parseInt(cronometro)) - 1;
+
         document.getElementById('input').value = subtracao;    
         document.getElementById('esgotado').innerHTML = '';
 
         if(document.getElementById('input').value == '0'){
             document.getElementById('input').value = '0';
-            clearInterval(tempo_2);
+            clearInterval(tempo2);
             document.getElementById('esgotado').innerHTML = 'Tempo esgotado!';
-            document.getElementById('esgotado').style.display = 'flex';
             }
+
+        if(Number.isNaN(parseInt(document.getElementById('input').value)) == true ){
+            clearInterval(tempo2);
+            alert("Digite um Número Inteiro Válido")
+            document.getElementById('input').value = '0';
+        }
+        
     },1000);
 }
 
 function stopregressive(){
-    clearInterval(tempo_2);
+    clearInterval(tempo2);
 }
 
 function resetregressive(){
-    clearInterval(tempo_2);
+    clearInterval(tempo2);
     document.getElementById('input').value = '0';
+}
+
+function telainicio(){
+
+    document.getElementById('btn-left-right').style.display = 'flex';
+    document.getElementById('stop-start-prog').style.display = 'none';
+    document.getElementById('prog').style.display = 'none';
+    document.getElementById('iniciada').style.display = 'none';
+    document.getElementById('regressive').style.display = 'none';
+    document.getElementById('prog').innerHTML = '';
+    document.getElementById('esgotado').style.display = 'none';
+    document.getElementById('input').value = '0';
+    clearInterval(tempo);
+    clearInterval(tempo2);
 }
